@@ -1,5 +1,6 @@
 body {
   font-family: 'Lato', sans-serif;
+  font-size: 14px;
 }
 .tabular .cell-1 {
   width: calc(3.33333333%);
@@ -46,7 +47,7 @@ body {
 .tabular__header {
   padding: 8px 10px;
   background: #f6f5f0;
-  font-size: 13px;
+  font-size: 12px;
   margin: 0;
 }
 .tabular__header.no-bg {
