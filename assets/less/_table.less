@@ -1,0 +1,65 @@
+// table grid 30
+@grid-cell-w: 100%/30;
+.tabular {
+	.cell-1 { width: calc((@grid-cell-w) * 1); }
+	.cell-2 { width: calc((@grid-cell-w) * 2); }
+	.cell-3 { width: calc((@grid-cell-w) * 3); }
+	.cell-4 { width: calc((@grid-cell-w) * 4); }
+	.cell-5 { width: calc((@grid-cell-w) * 5); }
+	.cell-6 { width: calc((@grid-cell-w) * 6); }
+	.cell-7 { width: calc((@grid-cell-w) * 7); }
+	.cell-8 { width: calc((@grid-cell-w) * 8); }
+	.cell-9 { width: calc((@grid-cell-w) * 9); }
+	.cell-10 { width: calc((@grid-cell-w) * 10); }
+	.cell-half { width: 50%; }
+	.cell-one-fourth { width: 25%; }
+	.cell-three-fourth { width: 75%; }
+	.cell-full { width: 100%; }
+}
+
+.tabular {
+	&__header {
+		padding: 8px 10px;
+		background: @bt-grey-bg;
+		font-size: 13px;
+		margin: 0;
+		&.no-bg {
+			background: transparent;
+			border-bottom: 1px solid @border-base;
+		}
+	}
+	&__row {
+		padding: 15px 10px;
+		margin: 0;
+		border: 1px solid transparent;
+		transition: all 0.3s ease;
+		&:not(:last-child) {
+			border-bottom: 1px solid @border-base;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.tabular {
+		.cell-1,
+		.cell-2,
+		.cell-3,
+		.cell-4,
+		.cell-5,
+		.cell-6,
+		.cell-7,
+		.cell-8,
+		.cell-9,
+		.cell-10{
+			width: 50%;
+		}
+		&__header{
+			display: none;
+		}
+		&__row {
+			position: relative;
+			margin-bottom: 15px;
+			flex-wrap: wrap;
+		}
+	}
+}
